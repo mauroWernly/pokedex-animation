@@ -39,7 +39,8 @@ a .stars-pokedex{
     opacity: 0;
 }
 
-a:hover .stars-pokedex{
+a:hover .stars-pokedex,
+a:focus .stars-pokedex{
     transform: scale(1);
     opacity: 1;
 }
