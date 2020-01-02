@@ -1,0 +1,42 @@
+body{
+    background-color: #e6d299;
+}
+
+.icon-row{
+    min-height: 100vh;
+}
+
+a .closed-pokedex{
+    opacity: 1;
+    transition: all .3s ease-in-out;
+    transform: translateX(75%);
+}
+
+a:hover .closed-pokedex,
+a:focus .closed-pokedex{
+    opacity: 0;
+    transform: translateX(-25%);
+}
+
+a .open-pokedex{
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    transform: translateX(75%);
+}
+
+a:hover .open-pokedex,
+a:focus .open-pokedex{
+    opacity: 1;
+    transform: translateX(-25%);
+}
+
+a .stars-pokedex{
+    transform: scale(.55);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+a:hover .stars-pokedex{
+    transform: scale(1);
+    opacity: 1;
+}
