@@ -8,6 +8,7 @@ body{
 
 a .closed-pokedex{
     opacity: 1;
+    max-width: 280px;
     transition: all .3s ease-in-out;
     transform: translateX(75%);
 }
@@ -20,7 +21,8 @@ a:focus .closed-pokedex{
 
 a .open-pokedex{
     opacity: 0;
-    transition: all .2s ease-in-out;
+    max-width: 280px;
+    transition: all .15s ease-in-out;
     transform: translateX(75%);
 }
 
@@ -31,6 +33,7 @@ a:focus .open-pokedex{
 }
 
 a .stars-pokedex{
+    max-width: 280px;
     transform: scale(.55);
     transition: all .2s ease-in-out;
     opacity: 0;
@@ -39,4 +42,12 @@ a .stars-pokedex{
 a:hover .stars-pokedex{
     transform: scale(1);
     opacity: 1;
+}
+
+@media(max-width: 768px){
+    a .open-pokedex,
+    a .closed-pokedex,
+    a .stars-pokedex{
+        max-width: 100px;
+    }
 }
