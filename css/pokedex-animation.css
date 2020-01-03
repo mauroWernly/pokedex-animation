@@ -6,9 +6,14 @@ body{
     min-height: 100vh;
 }
 
+a.pkm-icon{
+    text-decoration: none;
+    color: transparent;
+}
+
 a .closed-pokedex{
     opacity: 1;
-    max-width: 280px;
+    max-width: 180px;
     transition: all .3s ease-in-out;
     transform: translateX(75%);
 }
@@ -21,7 +26,7 @@ a:focus .closed-pokedex{
 
 a .open-pokedex{
     opacity: 0;
-    max-width: 280px;
+    max-width: 180px;
     transition: all .15s ease-in-out;
     transform: translateX(75%);
 }
@@ -33,7 +38,7 @@ a:focus .open-pokedex{
 }
 
 a .stars-pokedex{
-    max-width: 280px;
+    max-width: 180px;
     transform: scale(.55);
     transition: all .2s ease-in-out;
     opacity: 0;
@@ -41,6 +46,7 @@ a .stars-pokedex{
 
 a:hover .stars-pokedex,
 a:focus .stars-pokedex{
+    max-width: 180px;
     transform: scale(1);
     opacity: 1;
 }
@@ -51,4 +57,59 @@ a:focus .stars-pokedex{
     a .stars-pokedex{
         max-width: 100px;
     }
+    a:hover .stars-pokedex,
+    a:focus .stars-pokedex{
+        max-width: 100px;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+a .pokeball-closed{
+    max-width: 100px;
+    transition: all .2s ease-in-out;
+}
+
+@media (max-width: 768px){
+    a .pokeball-closed{
+        max-width: 80px;
+    }
+}
+
+@keyframes spin1 {
+    0% { transform: rotate(0deg);}
+    80% { transform: rotate(180deg);}
+    100% { 
+        opacity: 0;
+    }
+}
+
+a:hover img.pokeball-closed,
+a:focus img.pokeball-closed{
+    animation: spin1 .7s ease-in-out forwards;
+    transform: translateX(-100%);
+}
+
+
+a .pokeball-open{
+    max-width: 180px;
+    opacity: 0;
+}
+
+@media (max-width: 768px){
+    a .pokeball-open{
+        max-width: 100px;
+    }
+}
+
+@keyframes fade-in-pkm {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+a:hover .pokeball-open,
+a:focus .pokeball-open{
+    animation-delay: .7s;
+    animation: fade-in-pkm .8s ease-in-out forwards;
+    transform: translate(-75%);
 }
